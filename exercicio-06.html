@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>>Um motorista de táxi deseja calcular o rendimento de seu carro na praça. Sabendo-se que o preço do
+        combustível é de R$ 4,87, escreva um programa para ler: a marcação do odômetro (Km) no início do
+        dia, a marcação (Km) no final do dia, o número de litros de combustível gasto e o valor total (R$)
+        recebido dos passageiros. Calcular e escrever: a média do consumo em Km/L e o lucro (líquido) do dia
+        </h3>
+
+    <form>
+        <input type="text" height id="kmInicio" placeholder="KM inicial"><br>
+        <input type="text" id="kmFinal" placeholder="KM final"><br>
+        <input type="text" id="combustivelVar" placeholder="Litros de combustível gastos"><br>
+        <input type="text" id="faturamentoTotal" placeholder="Faturamento total recebido"><br>
+        
+        
+        <style> form input {width: 300px; height: 30px} ;</style>
+    </form>
+    
+    <button type="button" onclick="calcular()">calcular</button>
+        <p id="resposta"></p1>
+
+    <script>
+
+    function calcular(){    
+       
+        var combustivelTrue = 4.87;
+
+        var kmInicio = parseFloat(document.getElementById('kmInicio').value);
+
+        var kmFinal = parseFloat(document.getElementById('kmFinal').value);
+
+        var combustivelLitros = parseFloat(document.getElementById('combustivelVar').value);
+
+        var faturamentoTotal = parseFloat(document.getElementById('faturamentoTotal').value);
+       
+        var kmTrue = (kmFinal - kmInicio);
+
+        var mediaConsumo = (kmTrue / combustivelLitros);
+        
+        var custoCombustivel = (combustivelLitros * combustivelTrue)
+
+        var lucro = (faturamentoTotal - custoCombustivel);
+
+      document.getElementById("resposta").innerHTML = 'Sua média de consumo foi de ' + mediaConsumo + ' Km/L, e você lucrou R$ ' + lucro ;
+
+    }
+      </script>
+</body>
+
+</html>

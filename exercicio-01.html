@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Escreva um programa para ler o raio de um círculo, calcular e escrever a sua área (Pi * (raio * raio))</h3>
+
+    <form>
+        <input type="text" id="valor1" placeholder="DIGITE O RAIO"><br>
+        
+    </form>
+    
+    <button type="button" onclick="calcular()">calcular</button>
+        <h1 id="resposta"></h1>
+
+    <script>
+    function calcular(){    
+       
+        var raio = parseFloat(document.getElementById('valor1').value);
+       
+        var area = Math.PI * Math.pow(raio, 2);
+     
+        document.getElementById("resposta").innerHTML = '<b>é igual a  </b>' + area + '<b>°Celsius</b>';
+    }
+      </script>
+</body>
+
+</html>

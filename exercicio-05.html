@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>>Escreva um programa para ler as dimensões de uma cozinha retangular (comprimento, largura e
+        altura), calcular e escrever a quantidade de caixas de azulejos para se colocar em todas as suas
+        paredes (considere que não será descontada a área ocupada por portas e janelas). Cada caixa de
+        azulejos possui 1,5 m2.
+        </h3>
+
+    <form>
+        <input type="text" height id="comprimento" placeholder="digite o comprimento da cozinha"><br>
+        <input type="text" id="largura" placeholder="digite a largura da cozinha"><br>
+        <input type="text" id="altura" placeholder="digite a altura da cozinha"><br>
+       
+        <style> form input {width: 300px; height: 30px} ;</style>
+    </form>
+    
+    <button type="button" onclick="calcular()">calcular</button>
+        <h1 id="resposta"></h1>
+
+    <script>
+    function calcular(){    
+       
+        var comprimento = parseFloat(document.getElementById('comprimento').value);
+
+        var largura = parseFloat(document.getElementById('largura').value);
+
+        var altura = parseFloat(document.getElementById('altura').value);
+       
+        var area = ((largura * altura)/2)+((comprimento * altura)/2);
+    
+        var caixa = 1.5 ;
+
+        var resultado = (area/caixa);
+        
+        document.getElementById("resposta").innerHTML = 'Você precisará de '+ resultado + ' caixa(s) de azulejo';
+    }
+      </script>
+</body>
+
+</html>
