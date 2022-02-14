@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção 07</title>
+</head>
+
+<h1> Escreva um programa para ler 2 valores (considere que não serão informados valores iguais) e
+    escrever o maior deles.
+    </h1>
+<body>
+    
+    <form>
+        <input type="text" id="entradaA" placeholder="Numero">
+        +
+        <input type="text" id="entradaB" placeholder="Numero">
+        <button type="button" onclick="calc()">OK</button>
+    </form>
+<p1 id="saida"></p1>
+
+
+<script>
+    function calc() {
+        var a = parseFloat(document.getElementById('entradaA').value);
+        var b = parseFloat(document.getElementById('entradaB').value);
+    
+
+        if (a > b) {
+            document.getElementById('saida').innerHTML = a;
+         }
+        else  {
+            document.getElementById('saida').innerHTML = b;
+        }
+       
+
+    }
+</script>
+
+</body>
+
+</html>

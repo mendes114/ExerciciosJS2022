@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção 06</title>
+</head>
+
+<h1> Reescreva o programa do exercício anterior considerando o zero como neutro, ou seja, se for
+    digitado o valor zero, escrever a palavra zero.
+    </h1>
+<body>
+    
+    <form>
+        <input type="text" id="entrada" placeholder="Numero" onkeyup="calc()">
+       
+    </form>
+<p1  id="saida"></p1>
+
+
+<script>
+    function calc() {
+        var n = parseFloat(document.getElementById('entrada').value);
+    
+
+        if (n > 0) {
+            document.getElementById('saida').innerHTML = "Positivo";
+         }
+        else if  (n == 0) {
+            document.getElementById('saida').innerHTML = "Zero";
+        }
+        else {
+            document.getElementById('saida').innerHTML = "Negativo";
+        }
+
+    }
+</script>
+
+</body>
+
+</html>
