@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção 16</title>
+</head>
+
+<h1> Acrescente as seguintes mensagens à solução do exercício anterior conforme o caso.
+    - Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO.
+    - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.
+    Observação: Considere que o usuário poderá informar qualquer valor para o número de lados.
+    
+    </h1>
+<body>
+    
+    <form>
+        <input type="text" id="entrada" placeholder="Numero de lados do poligono">
+        <input type="text" id="entrada2" placeholder="Medida do lado em cm">
+        
+        
+        
+        <button type="button" onclick="calc()">OK</button>
+    </form>
+<p1 id="saida"></p1>
+
+
+<script>
+    function calc() {
+
+        var ladosPoligono = parseFloat(document.getElementById('entrada').value);
+        var medida = parseFloat(document.getElementById('entrada2').value);
+
+      if (ladosPoligono == 3 ) { document.getElementById('saida').innerHTML = 'TRIANGULO e seu perímetro é' + (medida*3) }
+        if (ladosPoligono < 3) {document.getElementById('saida').innerHTML = 'Não é um polígono'; }
+        if (ladosPoligono > 5) {document.getElementById('saida').innerHTML = 'Polígono não identificado'; }
+      if (ladosPoligono == 4 ) { document.getElementById('saida').innerHTML = 'QUADRADO e sua área é' + medida*2; }
+      if (ladosPoligono == 5 ) { document.getElementById('saida').innerHTML = 'PENTÁGONO'; }
+      
+        
+        
+       
+
+    }
+</script>
+
+</body>
+
+</html>

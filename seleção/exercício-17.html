@@ -1,0 +1,59 @@
+'<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção 17</title>
+</head>
+
+<h1> 
+Escreva um programa para ler 2 valores inteiros e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2.Subtração, 3.Divisão,  4.Multiplicação). Calcular e escrever o resultado dessa operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4.
+    
+    </h1>
+<body>
+    <style> body { margin-left: 200px; margin-right: 200px; }
+            form input { width:100px ;} 
+            #operação { width:300px ;}  
+            button { display: flex;}  </style>
+    <form>
+        <input type="text" id="entrada" placeholder="x">
+        <input type="text" id="entrada2" placeholder="y"> 
+        <p>digite o numero da operação</P>
+        <input type="text" id="operação" placeholder="1.Adição 2.Subtração 3.Divisão 4.Multiplicação"> <br><br>
+
+        
+            
+        <br> <br>
+        
+        <button type="button" onclick="calc()">OK</button>
+    </form>
+<p1 id="saida"></p1>
+
+
+<script>
+
+    function calc() {
+        var x = parseFloat(document.getElementById('entrada').value);
+        var y = parseFloat(document.getElementById('entrada2').value);
+         
+        var operação = parseFloat(document.getElementById('operação').value);
+    
+        if (operação == 1) {document.getElementById('saida').innerHTML = (x + y)}
+        if (operação == 2) {document.getElementById('saida').innerHTML = (x - y)}
+        if (operação == 3) {document.getElementById('saida').innerHTML = (x / y)}
+        if (operação == 4) {document.getElementById('saida').innerHTML = (x * y)}
+        
+    }
+        
+      
+        
+        
+       
+
+    
+</script>
+
+</body>
+
+</html>'
